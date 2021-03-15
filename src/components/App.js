@@ -9,7 +9,11 @@ class App extends React.Component {
             <form className='ui form'>
                 <div className='field'>
                     <label>Video Search</label>
-                    <input type='text' value={this.state.term}/>
+                    <input 
+                      type='text' 
+                      value={this.state.term}
+                      onChange={}
+                    />
                 </div>
             </form>
           </div>
