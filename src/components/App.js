@@ -2,20 +2,14 @@ import React from 'react';
 import SearchBar from './SearchBar';
 
 class App extends React.Component {
-    state = { term: '' };
+  onTermSubmit = (term) => {
+    console.log(term)
+  };
+
     render() {
         return (
-          <div className='search-bar ui segment'>
-            <form className='ui form'>
-                <div className='field'>
-                    <label>Video Search</label>
-                    <input 
-                      type='text' 
-                      value={this.state.term}
-                      onChange={}
-                    />
-                </div>
-            </form>
+          <div>
+            <SearchBar onFormSubmit={this.onTermSubmit}/>
           </div>
         );
     }
