@@ -4,13 +4,13 @@ import youtube from '../apis/youtube';
 
 class App extends React.Component {
   //Submits written term and sending function as prop to SearchBar.js
-  onTermSubmit = term => {
-    console.log(term)
-    youtube.get('/search', {
+  onTermSubmit = async term => {
+    const response = await youtube.get('/search', {
       params: {
         q: term
       }
     });
+    console.log(response)
   };
 
     render() {
