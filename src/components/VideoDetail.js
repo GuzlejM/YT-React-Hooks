@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-      return <div>Loading...</div>;
+      return <div>Veď vydrž do piči ! Najskor sa rozhodni čo chceš pozerať, OMG *prekrutilOči</div>;
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
