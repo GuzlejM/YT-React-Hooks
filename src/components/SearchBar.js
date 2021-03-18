@@ -19,14 +19,15 @@ class SearchBar extends React.Component {
     render() {
         return (
           <div className='search-bar ui segment'>
+            <h1>MyTube :D </h1>
             <form className='ui form' onSubmit={this.onFormSubmit}>
                 <div className='field'>
-                    <label>Hľadaj video, ty primitív</label>
+                    <label>Zadaj názov</label>
                     <input 
                       type='text' 
                       value={this.state.term}
                       onChange={this.onInputChange}
-                      placeholder='Tu napíš čo by si chcel pozrieť ♥♥♥'
+                      placeholder='Vyhľadaj video'
                     />
                 </div>
             </form>
