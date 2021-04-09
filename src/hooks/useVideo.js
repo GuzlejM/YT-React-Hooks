@@ -6,10 +6,10 @@ const useVideos = (defaultSearchTerm) => {
     //const [selectedVideo, setSelectedVideo] = useState(null);
 
     useEffect(() => {
-        onTermSubmit(defaultSearchTerm)
+        search(defaultSearchTerm)
       }, []);
 
-      const onTermSubmit = async term => {
+      const search = async term => {
         const response = await youtube.get('/search', {
           params: {
             q: term  
@@ -20,7 +20,7 @@ const useVideos = (defaultSearchTerm) => {
   
       };
 
-      return [videos, onTermSubmit]
+      return [videos, search]
 };
 
 export default useVideos;
